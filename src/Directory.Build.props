@@ -1,0 +1,26 @@
+<Project>
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="..\Common\DebugTo.cs"/>
+        <Compile Include="..\Common\CommonUsings.cs"/>
+        <Compile Include="..\Common\MockExtensions.cs"/>
+        <Compile Include="..\Common\OptionAssertions.cs"/>
+        <Compile Include="..\Common\TestLogger.cs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentAssertions"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection"/>
+        <PackageReference Include="Microsoft.Extensions.Logging"/>
+        <PackageReference Include="MinVer">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Moq"/>
+        <PackageReference Include="RZ.Foundation"/>
+    </ItemGroup>
+</Project>

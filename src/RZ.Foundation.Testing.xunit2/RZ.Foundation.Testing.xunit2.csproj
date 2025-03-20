@@ -1,11 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-      <OutputType>Exe</OutputType>
+    <RootNamespace>RZ.Foundation.Testing</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit" />
   </ItemGroup>
-
 </Project>

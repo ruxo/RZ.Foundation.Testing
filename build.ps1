@@ -15,5 +15,6 @@ function build {
 Push-Location ./src
 
 build .\RZ.Foundation.Testing
+build .\RZ.Foundation.Testing.xunit2
 
 Pop-Location
