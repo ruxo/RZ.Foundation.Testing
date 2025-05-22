@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Reflection;
+﻿using System.Reflection;
 using JetBrains.Annotations;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -11,7 +10,7 @@ namespace RZ.Foundation.Testing;
 public static class MockExtensions
 {
     public static IServiceCollection BuildFor<T>(this IServiceCollection services, IReadOnlyList<Type>? skip = null) where T : class =>
-        services.BuildFor(typeof(T));
+        services.BuildFor(typeof(T), skip);
 
     public static IServiceCollection BuildFor(this IServiceCollection services, Type type, IReadOnlyList<Type>? skip = null) {
         var skipTypes = skip ?? [];
@@ -22,7 +21,6 @@ public static class MockExtensions
                             select p;
 
         foreach (var p in missingParams){
-            Debug.WriteLine($"Missing {p.ParameterType}");
             if (p.ParameterType.IsAbstract)
                 services.AddSingleton(p.ParameterType, CreateMockByType(p.ParameterType).Object);
             else{
