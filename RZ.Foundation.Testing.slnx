@@ -1,0 +1,13 @@
+﻿<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="build.ps1" />
+    <File Path=".gitignore" />
+    <File Path="README.md" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src\RZ.Foundation.Testing.xunit2\RZ.Foundation.Testing.xunit2.csproj" Type="Classic C#" />
+    <Project Path="src\RZ.Foundation.Testing\RZ.Foundation.Testing.csproj" Type="Classic C#" />
+    <File Path="src\Directory.Build.props" />
+  </Folder>
+</Solution>
